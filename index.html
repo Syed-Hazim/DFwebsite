@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Title</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand mx-auto" href="#">Project</a>
+  </nav>
+  <div class="section-container mt-4">
+    <section class="upload-container">
+      <div class="drop-zone">
+        <div class="icon-container">
+          <img src="./file.svg" alt="file-icon" class="center" draggable="false">
+          <img src="./file.svg" alt="file-icon" class="left" draggable="false">
+          <img src="./file.svg" alt="file-icon" class="right" draggable="false">
+        </div>
+        <input type="file" name="" accept="video/mp4,video/x-m4v,video/*" id="file-input">
+        <div class="title">Drop your Files or, <span class="browseBtn">Browse</span></div>
+      </div>
+      <div class="video-container">
+        <video controls autoplay></video>
+      </div>
+    </section>
+    <div class="upload-vector"></div>
+  </div>
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
