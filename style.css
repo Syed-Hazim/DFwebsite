@@ -92,9 +92,20 @@ html {
   color: #0000ff;
   cursor: pointer;
 }
-
+.AnalyzeBtn{
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #0e38f3;
+  text-decoration-color: aliceblue;
+  position: absolute;
+  top: 550px;
+  left: 590px;
+}
 .video-container {
   display: none;
+  height:auto;
+  width: auto;
 }
 
 .upload-vector {

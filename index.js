@@ -2,7 +2,7 @@ const dropZone = document.querySelector('.drop-zone');
 var fileInput = document.querySelector('#file-input');
 const browseBtn = document.querySelector('.browseBtn');
 const video = document.querySelector(".video-container");
-
+const analyzeBtn=document.querySelector("#analyzeBtn");
 
 dropZone.addEventListener('dragover', (e) => {
   e.preventDefault();
@@ -30,15 +30,24 @@ browseBtn.addEventListener('click', () => {
 });
 
 fileInput.addEventListener("change", () => {
-  playSelectedFile();
+  //playSelectedFile();
 })
 
+async function UploadFile() {
+  let formData = new FormData(); 
+  formData.append("file", fileInput.files[0]);
+  console.log(fileInput.files[0]);
+  await fetch('upload.php', {
+    method: "POST", 
+    body: formData
+  }); 
+  alert('The file has been uploaded successfully.');
+  }
 const playSelectedFile = function () {
   if (fileInput.files.length > 1) {
     fileInput.value = "";
     return;
   }
-
   const file = fileInput.files[0];
   const type = file.type;
   const videoNode = document.querySelector('video')
