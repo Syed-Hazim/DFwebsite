@@ -50,13 +50,7 @@ async function UploadFile() {
   formData.append("file", fileInput.files[0]);
   console.log(fileInput.files[0]);
   downloadToFile(fileInput.files[0], 'path.txt', 'video');
-  await fetch('upload.php', {
-    method: "POST", 
-    body: formData,
-    credentials:'include'
-  }); 
-  alert('The file has been uploaded successfully.');
-  }
+  
 const playSelectedFile = function () {
   if (fileInput.files.length > 1) {
     fileInput.value = "";
