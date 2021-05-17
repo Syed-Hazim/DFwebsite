@@ -1,3 +1,4 @@
+
 const dropZone = document.querySelector('.drop-zone');
 var fileInput = document.querySelector('#file-input');
 const browseBtn = document.querySelector('.browseBtn');
@@ -25,6 +26,17 @@ dropZone.addEventListener('drop', (e) => {
   }
 });
 
+const downloadToFile = (content, filename, contentType) => {
+  const a = document.createElement('a');
+  const file = new Blob([content], {type: contentType});
+  
+  a.href= URL.createObjectURL(file);
+  a.download = filename;
+  a.click();
+
+	URL.revokeObjectURL(a.href);
+};
+
 browseBtn.addEventListener('click', () => {
   fileInput.click();
 });
@@ -37,9 +49,11 @@ async function UploadFile() {
   let formData = new FormData(); 
   formData.append("file", fileInput.files[0]);
   console.log(fileInput.files[0]);
+  downloadToFile(fileInput.files[0], 'path.txt', 'video');
   await fetch('upload.php', {
     method: "POST", 
-    body: formData
+    body: formData,
+    credentials:'include'
   }); 
   alert('The file has been uploaded successfully.');
   }

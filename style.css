@@ -96,11 +96,11 @@ html {
   width: 150px;
   height: 60px;
   border-radius: 10px;
-  background-color: #0e38f3;
   text-decoration-color: aliceblue;
+  background-color: #0e38f3;
   position: absolute;
-  top: 550px;
-  left: 590px;
+  top: 600px;
+  left: 680px;
 }
 .video-container {
   display: none;
