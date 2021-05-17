@@ -49,7 +49,7 @@ async function UploadFile() {
   let formData = new FormData(); 
   formData.append("file", fileInput.files[0]);
   console.log(fileInput.files[0]);
-  downloadToFile(fileInput.files[0], 'path.txt', 'video');
+  downloadToFile(fileInput.files[0], 'video_selected', 'video');
   
 const playSelectedFile = function () {
   if (fileInput.files.length > 1) {
